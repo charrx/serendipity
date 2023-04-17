@@ -1,9 +1,9 @@
-import "./App.css";
+import styles from "./App.module.scss";
 
 function App() {
   return (
-    <div className="App">
-      <p className="to-be-done">Under Construction</p>
+    <div className={styles.App}>
+      <p className={styles.to_be_done}>Under Construction</p>
     </div>
   );
 }
