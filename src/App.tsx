@@ -1,9 +1,10 @@
 import styles from "./App.module.scss";
+import Home from "./pages/home/Home";
 
 const App = () => {
   return (
     <div className={styles.App}>
-      <p className={styles.to_be_done}>Under Construction</p>
+      <Home />
     </div>
   );
 };
