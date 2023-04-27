@@ -1,0 +1,19 @@
+.navbar_container {
+    display: flex;
+    position: fixed;
+    left: 80px;
+    right: 80px;
+    top: 80px;
+    justify-content: space-between;
+
+    .logo {
+        letter-spacing: 0.1rem;
+    }
+
+    .link_container {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        gap: 1.5rem;
+    }
+}
