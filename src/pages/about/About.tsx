@@ -1,6 +1,6 @@
 import styles from "./About.module.scss";
 
-const About = () => {
+export const About = () => {
   return (
     <section id="about" className={styles.about_container}>
       <h2>Hello</h2>

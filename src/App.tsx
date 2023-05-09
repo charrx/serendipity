@@ -1,6 +1,5 @@
 import styles from "./App.module.scss";
-import About from "./pages/about/About";
-import Home from "./pages/home/Home";
+import { About, Home } from "./pages";
 
 const App = () => {
   return (

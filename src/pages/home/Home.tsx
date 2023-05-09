@@ -1,9 +1,9 @@
 import { useState } from "react";
-import NavBar from "../../components/navbar/Navbar";
-import { useSmoothScrollOnClick } from "../../utils/useSmoothScrollOnClick";
 import styles from "./Home.module.scss";
+import { NavBar } from "../../components";
+import { useSmoothScrollOnClick } from "../../utils";
 
-const Home = () => {
+export const Home = () => {
   const [showCursor, setShowCursor] = useState(true);
 
   // Sets the interval for the cursor to blink
@@ -22,7 +22,11 @@ const Home = () => {
             |
           </span>
         </span>
-        <a href="#about" className={styles.navigation_container} onClick={useSmoothScrollOnClick}>
+        <a
+          href="#about"
+          className={styles.navigation_container}
+          onClick={useSmoothScrollOnClick}
+        >
           Explore
           <div className={styles.navigation_item}></div>
         </a>
@@ -30,5 +34,3 @@ const Home = () => {
     </>
   );
 };
-
-export default Home;
