@@ -1,7 +1,7 @@
-import { useSmoothScrollOnClick } from "../../utils/useSmoothScrollOnClick";
+import { useSmoothScrollOnClick } from "../../utils";
 import styles from "./Navbar.module.scss";
 
-const NavBar = () => {
+export const NavBar = () => {
   return (
     <header className={styles.navbar_container}>
       <a href="#home_page" onClick={useSmoothScrollOnClick}>
@@ -11,11 +11,13 @@ const NavBar = () => {
         <a href="#about" onClick={useSmoothScrollOnClick}>
           about
         </a>
-        <a href="#projects" onClick={useSmoothScrollOnClick}>projects</a>
-        <a href="#contact" onClick={useSmoothScrollOnClick}>contact</a>
+        <a href="#projects" onClick={useSmoothScrollOnClick}>
+          projects
+        </a>
+        <a href="#contact" onClick={useSmoothScrollOnClick}>
+          contact
+        </a>
       </div>
     </header>
   );
 };
-
-export default NavBar;
