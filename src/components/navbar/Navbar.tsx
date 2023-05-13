@@ -1,23 +1,48 @@
 import { useSmoothScrollOnClick } from "../../utils";
-import styles from "./Navbar.module.scss";
 
-export const NavBar = () => {
+interface NavBarProps {
+  isOpen: boolean;
+}
+
+export const NavBar = (props: NavBarProps) => {
+  const { isOpen } = props;
   return (
-    <header className={styles.navbar_container}>
-      <a href="#home_page" onClick={useSmoothScrollOnClick}>
-        <span className={styles.logo}>{"<charrx />"}</span>
-      </a>
-      <div className={styles.link_container}>
-        <a href="#about" onClick={useSmoothScrollOnClick}>
-          about
-        </a>
-        <a href="#projects" onClick={useSmoothScrollOnClick}>
-          projects
-        </a>
-        <a href="#contact" onClick={useSmoothScrollOnClick}>
-          contact
-        </a>
-      </div>
-    </header>
+    <nav
+      className={`${
+        isOpen ? "block" : "hidden"
+      } w-full block md:flex md:items-center md:w-auto`}
+    >
+      <ul className="flex flex-col md:flex-row text-sm md:flex-grow">
+        <li className="text-center">
+          <a
+            href="#about"
+            onClick={useSmoothScrollOnClick}
+            className="block mt-4 md:inline-block md:mt-0 text-gray-300 hover:text-white mr-4"
+          >
+            _about
+          </a>
+        </li>
+
+        <li className="text-center">
+          <a
+            href="#projects"
+            onClick={useSmoothScrollOnClick}
+            className="block mt-4 md:inline-block md:mt-0 text-gray-300 hover:text-white mr-4"
+          >
+            _projects
+          </a>
+        </li>
+
+        <li className="text-center">
+          <a
+            href="#contact"
+            onClick={useSmoothScrollOnClick}
+            className="block mt-4 md:inline-block md:mt-0 text-gray-300 hover:text-white mr-4"
+          >
+            _contact
+          </a>
+        </li>
+      </ul>
+    </nav>
   );
 };
