@@ -1,11 +1,25 @@
-import { useSmoothScrollOnClick } from "../../utils";
+import { NavbarItem } from "./NavbarItem";
 
 interface NavBarProps {
   isOpen: boolean;
 }
 
-export const NavBar = (props: NavBarProps) => {
-  const { isOpen } = props;
+const navBarItems = [
+  {
+    href: "#about",
+    title: "_about",
+  },
+  {
+    href: "#projects",
+    title: "_projects",
+  },
+  {
+    href: "#contact",
+    title: "_contact",
+  },
+];
+
+export const NavBar: React.FC<NavBarProps> = ({ isOpen }) => {
   return (
     <nav
       className={`${
@@ -13,35 +27,9 @@ export const NavBar = (props: NavBarProps) => {
       } w-full block md:flex md:items-center md:w-auto`}
     >
       <ul className="flex flex-col md:flex-row text-sm md:flex-grow">
-        <li className="text-center">
-          <a
-            href="#about"
-            onClick={useSmoothScrollOnClick}
-            className="block mt-4 md:inline-block md:mt-0 text-gray-300 hover:text-white mr-4"
-          >
-            _about
-          </a>
-        </li>
-
-        <li className="text-center">
-          <a
-            href="#projects"
-            onClick={useSmoothScrollOnClick}
-            className="block mt-4 md:inline-block md:mt-0 text-gray-300 hover:text-white mr-4"
-          >
-            _projects
-          </a>
-        </li>
-
-        <li className="text-center">
-          <a
-            href="#contact"
-            onClick={useSmoothScrollOnClick}
-            className="block mt-4 md:inline-block md:mt-0 text-gray-300 hover:text-white mr-4"
-          >
-            _contact
-          </a>
-        </li>
+        {navBarItems.map((item, index) => {
+          return <NavbarItem key={index} href={item.href} title={item.title} />;
+        })}
       </ul>
     </nav>
   );
