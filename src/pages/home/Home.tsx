@@ -1,6 +1,5 @@
 import { useState } from "react";
 import styles from "./Home.module.scss";
-import { NavBar } from "../../components";
 import { useSmoothScrollOnClick } from "../../utils";
 
 export const Home = () => {
@@ -13,7 +12,6 @@ export const Home = () => {
 
   return (
     <>
-      <NavBar />
       <section id="home_page" className={styles.home_container}>
         <span className={styles.jobTitle}>Software Engineer</span>
         <span className={styles.devName}>
