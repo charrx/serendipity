@@ -4,7 +4,12 @@ interface NavBarProps {
   isOpen: boolean;
 }
 
-const navBarItems = [
+type NavbarItem = {
+  href: string;
+  title: string;
+};
+
+const navBarItems: NavbarItem[] = [
   {
     href: "#about",
     title: "_about",
