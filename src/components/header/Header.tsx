@@ -10,24 +10,26 @@ export const Header = () => {
   };
 
   return (
-    <header className="flex items-center justify-between flex-wrap p-6">
-      <div className="flex items-center flex-shrink-0 text-white mr-6">
-        <span className="tracking-widest">{"<charrx />"}</span>
-      </div>
+    <header className="fixed top-0 left-0 right-0 py-9 mx-20">
+      <div className="flex items-center justify-between flex-wrap">
+        <div className="flex items-center flex-shrink-0 text-white">
+          <span className="tracking-widest">{"</>"}</span>
+        </div>
 
-      <div className="block md:hidden">
-        <button
-          className="flex items-center hover:text-white"
-          onClick={toggleNavbar}
-        >
-          {isOpen ? (
-            <XMarkIcon className="w-6 h-6" />
-          ) : (
-            <Bars3BottomRightIcon className="w-6 h-6" />
-          )}
-        </button>
+        <div className="block md:hidden">
+          <button
+            className="flex items-center hover:text-white"
+            onClick={toggleNavbar}
+          >
+            {isOpen ? (
+              <XMarkIcon className="w-6 h-6" />
+            ) : (
+              <Bars3BottomRightIcon className="w-6 h-6" />
+            )}
+          </button>
+        </div>
+        <NavBar isOpen={isOpen} />
       </div>
-      <NavBar isOpen={isOpen} />
     </header>
   );
 };

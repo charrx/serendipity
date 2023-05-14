@@ -11,7 +11,7 @@ export const NavbarItem: React.FC<NavbarItemProps> = ({ href, title }) => {
       <a
         href={href}
         onClick={useSmoothScrollOnClick}
-        className="block mt-4 md:inline-block md:mt-0 text-gray-300 hover:text-white mr-4"
+        className="block md:inline-block text-gray-300 hover:text-white"
       >
         {title}
       </a>
