@@ -3,7 +3,7 @@ import { About, Home } from "./pages";
 
 const App = () => {
   return (
-    <div className="w-full h-full min-h-full px-20">
+    <div className="px-10 md:px-20">
       <Header />
       <Home />
       <About />
