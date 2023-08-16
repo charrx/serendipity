@@ -10,7 +10,7 @@ export const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 py-12 mx-10 md:mx-20">
+    <header className="fixed top-0 left-0 right-0 py-12 px-10 md:mx-20 bg-offBlack md:bg-transparent z-50">
       <div className="flex items-center justify-between flex-wrap">
         <div className="flex items-center flex-shrink-0 text-white">
           <span className="tracking-widest">{"</>"}</span>
