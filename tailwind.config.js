@@ -2,7 +2,17 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+        colors: {
+            offBlack: '#1e1e1e'
+        },
+        letterSpacing: {
+          thicc: "1rem"
+        },
+        fontFamily: {
+            ginger: 'Ginger',
+        }
+    },
     letterSpacing: {
       tightest: "-.075rem",
       tighter: "-.05rem",
