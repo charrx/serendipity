@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import { Header } from "./components";
 import { About, Home } from "./pages";
 
@@ -7,6 +8,7 @@ const App = () => {
       <Header />
       <Home />
       <About />
+      <Analytics />
     </div>
   );
 };
